@@ -9,8 +9,6 @@ package day3;
  *  1. 배열의 길이만큼 배열 하나도 선언후 0으로 초기화
  *  2. 배열의 길이만큼 순회 하면서 새 배열 index번째 요소랑 배열 요소 -1이랑 비교해서 count++ 시키기
  *  3. 배열요소 값이 1이상인 것만 출력 해준다.
- * #2 배열 Arr을 정렬 하여(오름 차순) 출력하시오
- *  출력결과 : 11122334444
  */
 
 public class ArrayEx12 {
@@ -28,7 +26,7 @@ public class ArrayEx12 {
 		}
 		
 		for(int i = 0; i < deDuplication.length; i++) {
-			System.out.println((i+1)+"의 개수 : "+ deDuplication[i]);
+//			System.out.println((i+1)+"의 개수 : "+ deDuplication[i]);
 		}
 //		3. 배열요소 값이 1이상인 것만 출력 해준다.
 		for(int i = 0; i < deDuplication.length; i++) {
