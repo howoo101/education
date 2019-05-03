@@ -1,6 +1,6 @@
 package pr4;
 
-public class Ex4 {
+public class Ex4_while {
 	public static void main(String[] args) {
 		int sum = 0;
 		int count = 0;
@@ -12,7 +12,7 @@ public class Ex4 {
 			j *= -1;
 			count++;
 		}
-		System.out.println(sum);
-		System.out.println(count);
+		System.out.println("sum: "+sum);
+		System.out.println("count: "+count);
 	}
 }

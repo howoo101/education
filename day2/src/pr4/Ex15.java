@@ -10,7 +10,8 @@ public class Ex15 {
 		int result = 0;
 		
 		while(tmp !=0) {
-			tmp -= tmp%10;
+			result = result*10+(tmp %10);
+			tmp = tmp/10;
 		}
 		if (number == result) {
 			System.out.println(number + "는 회문수 입니다.");

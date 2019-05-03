@@ -2,8 +2,8 @@ package pr3;
 
 public class Ex6 {
 	public static void main(String[] args) {
-		int num = 333;
-		System.out.println(num - num%10 + 1);
-		
+		int num = 24;
+		System.out.println((num/10+1)*10-num);
+		System.out.println(10-num%10);
 	}
 }

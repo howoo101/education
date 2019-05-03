@@ -2,7 +2,8 @@ package pr3;
 
 public class Ex4 {
 	public static void main(String[] args) {
-		int num = -1;
-		System.out.println(num - num%10);
+		int num = 456;
+		System.out.println(num - num%100);
+		System.out.println(num/100 *100);
 	}
 }
