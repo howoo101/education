@@ -1,32 +1,22 @@
 package day6;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
-class Card {
-	String kind;
-	int num;
 
-	Card(String kind, int num) {
-		this.kind = kind;
-		this.num = num;
-	}
-
-	Card() {
-		this("SPADE", 1);
-	}
-}
-
-class PokerTest {
+class PokerTest2 {
 	// 5장의 카드 객체가 담긴 cArr을 받아서
 	// 랭킹을 문자열로 반환
 	// 아래의 메서드를 완성하시오.
 
 	String checkRank(Card[] cArr) {
 		// 1.같은 숫자의 카드가 몇개인지 세는 것.(pair, three card, four card)
+		// 2. 같은 무늬의 카드가 5장인가
+		// 3. 모든숫자가 연속적인가
+		
 		int[] cntArr = new int[14]; // 0 ~ 13
 		
 		for(int i = 0; i < cArr.length; i++) {
@@ -38,38 +28,34 @@ class PokerTest {
 		boolean threeCard = false;
 		boolean fourCard = false;
 		
+		//모양5개
+		boolean flush = true; 
+		//연속숫자 5개
+		int straightCnt = 0;
+		boolean straight = false;
 		
 		for(int i = 0; i < cntArr.length; i++) {
 			if(cntArr[i] == 2) pair++;
 			if(cntArr[i] == 3) threeCard = true;
 			if(cntArr[i] == 4) fourCard = true;
+			
+			if(flush && i < cArr.length-1) {
+				if(!(cArr[i].kind.equals(cArr[i+1].kind))) {
+					flush = false;
+				}
+			}
+			
+			if(cntArr[i] == 0) straightCnt = 0; 
+			else straightCnt++; 
+				
+			
+			if(straightCnt == 5) straight = true; 
 		}
 		
 		if(pair== 1 && threeCard == true) return "FULL HOUSE";
 		if(fourCard) return "FOUR CARD";
 		if(threeCard) return "THREE CARD";
 		if(pair > 0) return pair + " PAIR";
-		
-		// 2. 같은 무늬의 카드가 5장인가
-		boolean flush = true; 
-		for(int i = 0; i < cArr.length-1; i++) {
-			if(!(cArr[i].kind.equals(cArr[i+1].kind))) {
-				flush = false;
-				break;
-			}
-		}
-		
-		// 3. 모든숫자가 연속적인가
-		int straightCnt = 0;
-		boolean straight = false;
-		for(int i = 0; i <cntArr.length; i++) {
-			if(cntArr[i] == 1) straightCnt++;
-			else straightCnt = 0;
-			
-			if(straightCnt == 5) straight = true; 
-			
-		}
-		
 		if(flush && straight) return "STRAIGHT FLUSH";
 		if(flush) return "FLUSH";
 		if(straight) return "STRAIGHT";
