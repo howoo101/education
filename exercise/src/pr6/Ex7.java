@@ -12,6 +12,7 @@ class MyPoint {
 	public double getDistance(int x, int y) {
 		return Ex6.getDistance(x, y, this.x, this.y);
 	}
+	
 }
 
 public class Ex7 {
