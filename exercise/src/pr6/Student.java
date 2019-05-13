@@ -26,7 +26,7 @@ public class Student {
 	}
 	
 	public float getAverage() {
-		return (int)(((this.getTotal() / 3f) +0.05f) * 10)/10f;
+		return (int)(getTotal() / 3f * 10 + 0.5) / 10f;
 	}
 
 	public String info() {

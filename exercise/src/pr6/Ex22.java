@@ -2,6 +2,9 @@ package pr6;
 
 public class Ex22 {
 	public static boolean isNumber(String str) {
+		if(str == null || str.equals(""))
+			return false;
+		
 		boolean isNumber = true;
 		for(int i = 0; i < str.length(); i++) {
 			if('0' > str.charAt(i) || str.charAt(i) > '9') {

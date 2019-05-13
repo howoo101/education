@@ -5,6 +5,9 @@ import java.util.Arrays;
 public class Ex20 {
 	
 	static int[] shuffle(int[] arr) {
+		
+		if(arr == null || arr.length == 0) return arr;
+		
 		int temp = 0;
 		int idx = 0;
 		for(int i = 0; i < arr.length; i++) {
@@ -15,6 +18,7 @@ public class Ex20 {
 		}
 		return arr;
 	}
+	
 	public static void main(String[] args) {
 		int[] original = {1,2,3,4,5,6,7,8,9};
 		System.out.println(Arrays.toString(original));

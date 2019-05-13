@@ -12,8 +12,7 @@ class MyTv {
 	
 	void turnOff() {
 		//isPowerOn의 값이 true면 false로, false면 ture로 바꾼다.
-		if(this.isPowerOn) this.isPowerOn = false;
-		else this.isPowerOn = true;
+		isPowerOn = !isPowerOn;
 	}
 	
 	void volumeUp() {

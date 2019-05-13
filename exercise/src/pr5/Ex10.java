@@ -16,12 +16,14 @@ public class Ex10 {
 		for(int i = 0; i < src.length(); i++) {
 			char ch = src.charAt(i);
 			if('a'<=ch && ch <= 'z')  {
-				ch -= 97;
-				result += abcCode[ch];
+//				ch -= 97;
+//				result += abcCode[ch];
+				result += abcCode[ch-'a'];
 			}
 			if('1' <= ch && ch <= '9') {
-				ch -= 48;
-				result += numCode[ch];
+//				ch -= 48;
+//				result += numCode[ch];
+				result += numCode[ch-'0'];
 			}
 			
 		}

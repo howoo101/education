@@ -17,7 +17,8 @@ class Ex11 {
 				result[i][j] = score[i][j];
 				result[i][score[i].length] += result[i][j];
 				result[score.length][j] += score[i][j];
-				if(j == score[i].length -1) result[score.length][j+1] += result[i][score[i].length];
+				if(j == score[i].length -1) 
+					result[score.length][j+1] += result[i][score[i].length];
 				
 			}
 		}

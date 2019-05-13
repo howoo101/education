@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Ex23 {
 	public static int max(int[] arr) {
 		if(arr == null || arr.length == 0) return -999999;
+		
 		int max = arr[0];
 		for(int i = 1; i < arr.length; i++) {
 			if(max < arr[i]) max = arr[i];

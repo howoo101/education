@@ -2,7 +2,7 @@ package pr6;
 
 public class Ex24 {
 	public static int abs(int value) {
-		return value > 0 ? value : -value;
+		return value >= 0 ? value : -value;
 	}
 	public static void main(String[] args) {
 		int value = 5;

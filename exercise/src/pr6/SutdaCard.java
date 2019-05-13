@@ -5,8 +5,7 @@ public class SutdaCard {
 	public boolean isKwang;
 
 	public SutdaCard() {
-		this.num = 1;
-		this.isKwang = true;
+		this(1, true);
 	}
 	
 	public SutdaCard(int num, boolean isKwang) {
@@ -15,8 +14,9 @@ public class SutdaCard {
 	}
 	
 	public String info() {
-		if (this.isKwang == true) return this.num + "K";
-		else return this.num +"";
+//		if (this.isKwang == true) return this.num + "K";
+//		else return this.num +"";
+		return num + (isKwang ? "K" : "");
 	}
 }
 
