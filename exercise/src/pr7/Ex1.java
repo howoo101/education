@@ -5,16 +5,18 @@ class SutdaDeck {
 	
 	SutdaDeck() {
 		int num = 0;
-		boolean isKwang = true;
+		
 		for(int i = 0; i < CARD_NUM; i++) {
-			isKwang = true;
-			if(i/10 == 0) {
-				num = i + 1;
-				if(i != 0 && i != 2 && i != 7 ) isKwang = false; 	
-			} else {
-				num = (i%10)+1;
-				isKwang = false;
-			}
+			num = (i%10) + 1;
+			boolean isKwang = (i < 10) &&
+					(num==1 || num==3 || num==8);
+//			if(i/10 == 0) {
+//				num = i + 1;
+//				if(i != 0 && i != 2 && i != 7 ) isKwang = false; 	
+//			} else {
+//				num = (i%10)+1;
+//				isKwang = false;
+//			}
 			cards[i] = new SutdaCard(num,isKwang);
 		}
 	}
@@ -29,17 +31,19 @@ class SutdaDeck {
 	}
 	
 	public SutdaCard pick(int index) {
+		if(index < 0 || index >= CARD_NUM) //index의 유효성을 검사한다.
+			return null;
 		return this.cards[index];
 	}
 	
 	public SutdaCard pick() {
-		return this.cards[(int)(Math.random()*CARD_NUM)];
+		return pick((int)(Math.random()*CARD_NUM));
 	}
 }
 
 class SutdaCard {
-	private int num;
-	private boolean isKwang;
+	final private int num;
+	final private boolean isKwang;
 	
 	SutdaCard() {
 		this(1,true);

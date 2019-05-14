@@ -26,7 +26,9 @@ class MyTv2 {
 	}
 	
 	public void setChannel(int channel) {
-		if(this.channel != 0) this.prevChannel = this.channel; 
+		if(channel > MAX_CHANNEL || channel < MIN_CHANNEL) return;
+		
+		this.prevChannel = this.channel; 
 		this.channel = channel;
 	}
 	
@@ -35,6 +37,8 @@ class MyTv2 {
 	}
 	
 	public void setVolume(int volume) {
+		if(volume > MAX_VOLUME || volume < MIN_VOLUME) return;
+		
 		this.volume = volume;
 	}
 	

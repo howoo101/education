@@ -4,6 +4,8 @@ class Product {
 	int price;
 	int bonusPoint;
 	
+	Product() {}
+	
 	Product(int price) {
 		this.price = price;
 		bonusPoint = (int)(price/10.0);
@@ -11,8 +13,8 @@ class Product {
 }
 
 class Tv extends Product {
-	Tv(int price) {
-		super(price);
+	Tv() {
+		super();
 	}
 	
 	public String toString() {
@@ -22,6 +24,6 @@ class Tv extends Product {
 
 public class Ex5 {
 	public static void main(String[] args) {
-		
+		Tv t = new Tv();
 	}
 }
