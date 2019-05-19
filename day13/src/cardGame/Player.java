@@ -1,5 +1,7 @@
 package cardGame;
 
+import java.util.Arrays;
+
 public class Player {
 	Card[] cards = new Card[5]; // 5장
 	int money; // 소유한돈
@@ -17,9 +19,11 @@ public class Player {
 	}
 
 	// 카드 5장 결과 판단
-	public String setResult(Card[] cards) {
+	public String getResult(Card[] cards) {
+		System.out.println(Arrays.toString(cards));
+	
 		//숫자 판단
-		int[] cArr = new int[Deck.NUM_MAX];
+		int[] cArr = new int[Deck.NUM_MAX + 1];
 		int pair = 0;
 		for(int i = 0; i < cards.length; i++) {
 			cArr[cards[i].number]++;

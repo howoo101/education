@@ -20,7 +20,7 @@ class PlayerTest {
 	    new Card("CLUB", 4),
 	    new Card("SPADE", 5)   
 	   };
-	   assertTrue(a.setResult(cArr).equals("1 PAIR")); 
+	   assertTrue(a.getResult(cArr).equals("1 PAIR")); 
 	  }
 
 	 @Test
@@ -34,7 +34,7 @@ class PlayerTest {
 	    new Card("CLUB", 4),
 	    new Card("SPADE", 4)   
 	   };
-	   assertTrue(a.setResult(cArr).equals("2 PAIR")); 
+	   assertTrue(a.getResult(cArr).equals("2 PAIR")); 
 	  }
 
 	 @Test
@@ -47,7 +47,7 @@ class PlayerTest {
 	    new Card("CLUB", 2),
 	    new Card("SPADE", 4)   
 	   };
-	   assertTrue(a.setResult(cArr).equals("THREE CARD")); 
+	   assertTrue(a.getResult(cArr).equals("THREE CARD")); 
 	  }
 
 	 @Test
@@ -60,7 +60,7 @@ class PlayerTest {
 	    new Card("CLUB", 1),
 	    new Card("SPADE", 4)   
 	   };
-	   assertTrue(a.setResult(cArr).equals("FOUR CARD")); 
+	   assertTrue(a.getResult(cArr).equals("FOUR CARD")); 
 	  }
 
 	 @Test
@@ -73,7 +73,7 @@ class PlayerTest {
 	    new Card("CLUB", 4),
 	    new Card("SPADE", 4)   
 	   };
-	   assertTrue(a.setResult(cArr).equals("FULL HOUSE")); 
+	   assertTrue(a.getResult(cArr).equals("FULL HOUSE")); 
 	  }
 	 
 	 @Test
@@ -87,7 +87,7 @@ class PlayerTest {
 	   new Card("CLUB", 4),
 	   new Card("SPADE", 5)   
 	  };
-	  assertTrue(a.setResult(cArr).equals("STRAIGHT")); 
+	  assertTrue(a.getResult(cArr).equals("STRAIGHT")); 
 	 }
 
 	 @Test
@@ -100,7 +100,7 @@ class PlayerTest {
 	   new Card("SPADE", 4),
 	   new Card("SPADE", 5)   
 	  };
-	  assertTrue(a.setResult(cArr).equals("FLUSH")); 
+	  assertTrue(a.getResult(cArr).equals("FLUSH")); 
 	 }
 	 
 	 @Test
@@ -113,7 +113,7 @@ class PlayerTest {
 	   new Card("SPADE", 4),
 	   new Card("SPADE", 5)   
 	  };
-	  assertTrue(a.setResult(cArr).equals("STRAIGHT FLUSH")); 
+	  assertTrue(a.getResult(cArr).equals("STRAIGHT FLUSH")); 
 	 }
 
 	 @Test
@@ -126,7 +126,7 @@ class PlayerTest {
 	   new Card("SPADE", 4),
 	   new Card("SPADE", 5)   
 	  };
-	  assertTrue(a.setResult(cArr).equals("NO RANK")); 
+	  assertTrue(a.getResult(cArr).equals("NO RANK")); 
 	 }
 
 }
